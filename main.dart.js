@@ -8544,13 +8544,14 @@ _.d=_.c=null},
 a61:function a61(a){this.a=a},
 a62:function a62(a,b){this.a=a
 this.b=b},
-a9j:function(a,b,c,d,e){return new N.Dk(a,b,c,d,e)},
-Dk:function Dk(a,b,c,d,e){var _=this
+a9j:function(a,b,c,d,e,f){return new N.Dk(a,b,c,d,e,f)},
+Dk:function Dk(a,b,c,d,e,f){var _=this
 _.a=a
 _.b=b
 _.c=c
 _.d=d
-_.e=e},
+_.e=e
+_.f=f},
 A4:function A4(a,b){this.c=a
 this.a=b},
 Pg:function Pg(){},
@@ -12320,15 +12321,17 @@ _.fy=!0
 _.go=null
 _.a=0
 _.c=_.b=null},
-aoa:function(a){var s,r,q,p,o=J.ax(a),n=H.Mt(o.i(a,"key")),m=H.Mt(o.i(a,"code"))
-if(m==null)m=""
-s=n==null?"":n
-r=H.aqf(o.i(a,"metaState"))
-q=new A.W5(m,s,r==null?0:r)
-p=H.cu(o.i(a,"type"))
-switch(p){case"keydown":return new B.oc(q)
-case"keyup":return new B.uj(q)
-default:throw H.b(U.B3("Unknown key event type: "+p))}},
+aoa:function(a){var s,r,q,p,o,n=J.ax(a),m=H.Mt(n.i(a,"key")),l=H.Mt(n.i(a,"code"))
+if(l==null)l=""
+s=m==null
+r=s?"":m
+q=H.aqf(n.i(a,"metaState"))
+p=new A.W5(l,r,q==null?0:q)
+!s
+o=H.cu(n.i(a,"type"))
+switch(o){case"keydown":return new B.oc(p)
+case"keyup":return new B.uj(p)
+default:throw H.b(U.B3("Unknown key event type: "+o))}},
 le:function le(a,b){this.a=a
 this.b=b},
 ee:function ee(a,b){this.a=a
@@ -23330,6 +23333,7 @@ cU:function(a){this.a.pop()},
 Fa:function(a,b){if(!$.aep){$.aep=!0
 $.bG().$1("The performance overlay isn't supported on the web")}},
 Fb:function(a,b,c,d){var s,r
+c
 t.S9.a(b)
 s=b.a.b
 r=new H.dW(null)
@@ -61232,7 +61236,7 @@ r($,"auc","ahh",function(){return new B.a1A()})
 s($,"awq","aiz",function(){return new O.Oj(P.aN(t.Gf))})
 s($,"awj","aix",function(){return new D.NH()})
 r($,"atG","ah1",function(){return P.lH("^[\\w!#%&'*+\\-.^`|~]+$",!0)})
-s($,"awx","ab6",function(){return H.a([N.a9j("QR & Barcode Scanner App","The app integrated scanner is able to identify various types of barcodes and display its information to the user thanks to the Google Machine Learning Kit. It also contains a history with all the previously scanned elements and provides the posibility of creating customised lists with those elements.","Pre-release",C.ut,C.oE),N.a9j("Classroom engagement App","Similar to 'Kahoot!' or 'Wooclap'. UI and log-in specially designed for UC3M student mail system. ","On production",C.us,C.iF),N.a9j("Responsive portfolio website","This beautiful responsive website! I designed it to practice and acquire new Flutter Web knowledge. ","Finished",C.ur,C.oD)],H.U("p<Dk>"))})
+s($,"awx","ab6",function(){return H.a([N.a9j("QR & Barcode Scanner App","The app integrated scanner is able to identify various types of barcodes and display its information to the user thanks to the Google Machine Learning Kit. It also contains a history with all the previously scanned elements and provides the posibility of creating customised lists with those elements.","Released Alpha",C.ut,C.oE,"https://play.google.com/store/apps/details?id=com.realvarx.totalscanner"),N.a9j("Classroom engagement App","Similar to 'Kahoot!' or 'Wooclap'. UI and log-in specially designed for UC3M student mail system. ","On production",C.us,C.iF,"https://realvarx.github.io/classroom-engagement-info/"),N.a9j("Responsive portfolio website","This beautiful responsive website! I designed it to practice and acquire new Flutter Web knowledge. ","Finished",C.ur,C.oD,"https://realvarx.github.io/portfolio/")],H.U("p<Dk>"))})
 r($,"avN","MY",function(){return P.fh(t.z,H.U("A1<@>"))})
 r($,"auT","aaR",function(){return new P.x()})
 s($,"ap9","aaQ",function(){return new F.Ua($.aaR())})
@@ -61288,4 +61292,3 @@ a(b.target)}for(var r=0;r<s.length;++r)s[r].addEventListener("load",onLoad,false
 var s=F.a7p
 if(typeof dartMainRunner==="function")dartMainRunner(s,[])
 else s([])})})()
-//# sourceMappingURL=main.dart.js.map
